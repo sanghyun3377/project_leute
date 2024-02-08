@@ -53,7 +53,6 @@ void diSetup() {
       foodsRepository: getIt<RegisterdFoodsRepository>(),
       userDataRepository: getIt<UserDataRepository>()
   ));
-
   getIt.registerFactory<AddPageViewModel>(() =>
       AddPageViewModel());
 }
