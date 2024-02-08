@@ -9,8 +9,7 @@ import 'package:leute/view/page/signup_page/signup_page_view_model.dart';
 import 'package:provider/provider.dart';
 
 class SignupPage extends StatefulWidget {
-  final String userToken;
-  const SignupPage({super.key, required this.userToken});
+  const SignupPage({super.key});
 
   @override
   State<SignupPage> createState() => _SignupPageState();

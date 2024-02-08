@@ -63,9 +63,7 @@ final router = GoRouter(initialLocation: '/splash_page', routes: [
       builder: (context, state) {
         return ChangeNotifierProvider(
           create: (_) => SignupPageViewModel(),
-          child: SignupPage(
-            userToken: state.extra as String,
-          ),
+          child: const SignupPage(),
         );
       }),
 

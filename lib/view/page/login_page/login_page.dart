@@ -25,11 +25,6 @@ class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   StreamSubscription? authStateChanges;
 
-  var messageString = '';
-  String? token;
-
-
-
   @override
   void initState() {
     super.initState();
@@ -114,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: const Text('비밀번호 찾기')),
                   TextButton(
                       onPressed: () {
-                        context.go('/signup', extra: token);
+                        context.go('/signup');
                       },
                       child: const Text('회원가입')),
                 ],

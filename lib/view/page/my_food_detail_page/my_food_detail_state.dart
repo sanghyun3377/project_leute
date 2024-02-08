@@ -1,6 +1,5 @@
 import 'package:leute/data/models/foods_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 part 'my_food_detail_state.freezed.dart';
 part 'my_food_detail_state.g.dart';
