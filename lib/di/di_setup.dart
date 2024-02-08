@@ -14,6 +14,7 @@ import '../view/page/discard_foods_page/discard_foods_view_model.dart';
 import '../view/page/group_setting_page/group_setting_page_view_model.dart';
 import '../view/page/refrige_detail_page/freezer_comp_view_model.dart';
 import '../view/page/refrige_detail_page/refrige_comp_view_model.dart';
+import '../view/page/refrige_pages/add_page_view_model.dart';
 
 final getIt = GetIt.instance;
 
@@ -52,4 +53,6 @@ void diSetup() {
       foodsRepository: getIt<RegisterdFoodsRepository>(),
       userDataRepository: getIt<UserDataRepository>()
   ));
+  getIt.registerFactory<AddPageViewModel>(() =>
+      AddPageViewModel());
 }

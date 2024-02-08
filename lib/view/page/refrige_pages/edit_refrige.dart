@@ -162,8 +162,10 @@ class _EditRefrigeState extends State<EditRefrige> {
                                   .toList(),
                               isExpanded: true,
                               onChanged: (value) {
-                                selectedColdstorageController.text = value!;
-                                addPageViewModel.selectedColdstorage = value;
+                                setState(() {
+                                  selectedColdstorageController.text = value!;
+                                  addPageViewModel.selectedColdstorage = value;
+                                });
                               },
                             ),
                           ),
@@ -197,8 +199,11 @@ class _EditRefrigeState extends State<EditRefrige> {
                                   .toList(),
                               isExpanded: true,
                               onChanged: (value) {
-                                selectedFrozenStorageController.text = value!;
-                                addPageViewModel.selectedFrozenStorage = value;
+                                setState(() {
+                                  selectedFrozenStorageController.text = value!;
+                                  addPageViewModel.selectedFrozenStorage =
+                                      value;
+                                });
                               },
                             ),
                           ),
@@ -235,8 +240,11 @@ class _EditRefrigeState extends State<EditRefrige> {
                                   .toList(),
                               isExpanded: true,
                               onChanged: (value) {
-                                selectedStoragePeriodController.text = value!;
-                                addPageViewModel.selectedStoragePeriod = value;
+                                setState(() {
+                                  selectedStoragePeriodController.text = value!;
+                                  addPageViewModel.selectedStoragePeriod =
+                                      value;
+                                });
                               },
                             ),
                           ),
@@ -273,9 +281,12 @@ class _EditRefrigeState extends State<EditRefrige> {
                                   .toList(),
                               isExpanded: true,
                               onChanged: (value) {
-                                selectedExtensionPeriodController.text = value!;
-                                addPageViewModel.selectedExtensionPeriod =
-                                    value;
+                                setState(() {
+                                  selectedExtensionPeriodController.text =
+                                      value!;
+                                  addPageViewModel.selectedExtensionPeriod =
+                                      value;
+                                });
                               },
                             ),
                           ),

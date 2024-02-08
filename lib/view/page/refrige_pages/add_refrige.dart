@@ -144,7 +144,10 @@ class _AddRefrigeState extends State<AddRefrige> {
                                       .toList(),
                               isExpanded: true,
                               onChanged: (value) {
+                                setState(() {
                                 addPageViewModel.selectedColdstorage = value!;
+
+                                });
                               },
                             ),
                           ),
@@ -182,7 +185,10 @@ class _AddRefrigeState extends State<AddRefrige> {
                                   .toList(),
                               isExpanded: true,
                               onChanged: (value) {
+                                setState(() {
+
                                 addPageViewModel.selectedFrozenStorage = value!;
+                                });
                               },
                             ),
                           ),
@@ -215,7 +221,10 @@ class _AddRefrigeState extends State<AddRefrige> {
                                   .toList(),
                               isExpanded: true,
                               onChanged: (value) {
+                                setState(() {
                                 addPageViewModel.selectedStoragePeriod = value!;
+
+                                });
                               },
                             ),
                           ),
@@ -253,8 +262,11 @@ class _AddRefrigeState extends State<AddRefrige> {
                                   .toList(),
                               isExpanded: true,
                               onChanged: (value) {
+                                setState(() {
+
                                 addPageViewModel.selectedExtensionPeriod =
                                     value!;
+                                });
                               },
                             ),
                           ),
