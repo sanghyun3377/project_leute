@@ -3,14 +3,15 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:leute/data/models/foods_model.dart';
 import 'package:leute/data/models/refrige_model.dart';
+import 'package:leute/domain/foods_repository.dart';
 import 'package:leute/view/page/my_food_detail_page/my_food_detail_state.dart';
-
-import '../../../data/repository/foods_repository_impl.dart';
-
 
 
 class MyFoodDetailViewModel with ChangeNotifier {
+  final RegisterdFoodsRepository foodsRepository;
   MyFoodDetailState _state = MyFoodDetailState([], 0, false);
+
+  MyFoodDetailViewModel({required this.foodsRepository});
 
   MyFoodDetailState get state => _state;
 
@@ -89,7 +90,7 @@ class MyFoodDetailViewModel with ChangeNotifier {
 
   //firebase 데이터 get
   Future<void> getFirebaseFoodsData() async {
-    final result = await RegisterdFoodsRepositoryImpl().getFirebaseFoodsData();
+    final result = await foodsRepository.getFirebaseFoodsData();
 
     state.foodDetails.clear();
     state.foodDetails.addAll(result);

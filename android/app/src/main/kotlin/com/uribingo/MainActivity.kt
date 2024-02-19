@@ -1,4 +1,4 @@
-package com.example.leute
+package com.uribingo
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -39,7 +39,8 @@ void diSetup() {
   getIt.registerFactory<RefrigeCompViewModel>(() => RefrigeCompViewModel(
       foodsRepository: getIt<RegisterdFoodsRepository>(),
       userDataRepository: getIt<UserDataRepository>()));
-  getIt.registerFactory<MyFoodDetailViewModel>(() => MyFoodDetailViewModel());
+  getIt.registerFactory<MyFoodDetailViewModel>(() => MyFoodDetailViewModel(
+      foodsRepository: getIt<RegisterdFoodsRepository>()));
 
   getIt.registerFactory<MainScreenViewModel>(() =>
       MainScreenViewModel(userDataRepository: getIt<UserDataRepository>()));
@@ -51,8 +52,6 @@ void diSetup() {
 
   getIt.registerFactory<RegisterViewModel>(() => RegisterViewModel(
       foodsRepository: getIt<RegisterdFoodsRepository>(),
-      userDataRepository: getIt<UserDataRepository>()
-  ));
-  getIt.registerFactory<AddPageViewModel>(() =>
-      AddPageViewModel());
+      userDataRepository: getIt<UserDataRepository>()));
+  getIt.registerFactory<AddPageViewModel>(() => AddPageViewModel());
 }
