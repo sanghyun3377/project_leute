@@ -27,23 +27,23 @@ class SplashScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.4,
               ),
               SizedBox(height: 20.h),
-              Text(
-                'UriBingo',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25.sp,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFFFFB500),
-                  letterSpacing: 3.sp,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black.withOpacity(0.1),
-                      offset: const Offset(2.0, 1.0),
-                      blurRadius: 4.0.r,
-                    ),
-                  ],
-                ),
-              ),
+              // Text(
+              //   'UriBingo',
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(
+              //     fontSize: 25.sp,
+              //     fontWeight: FontWeight.bold,
+              //     color: const Color(0xFFFFB500),
+              //     letterSpacing: 3.sp,
+              //     shadows: [
+              //       Shadow(
+              //         color: Colors.black.withOpacity(0.1),
+              //         offset: const Offset(2.0, 1.0),
+              //         blurRadius: 4.0.r,
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),

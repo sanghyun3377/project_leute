@@ -9,9 +9,12 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:label="leute"
+        android:label="우리빙고"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4594838540865794~9158850232"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
