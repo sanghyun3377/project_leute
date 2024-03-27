@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,16 +11,35 @@ import 'package:http/http.dart' as http;
 import 'package:leute/di/di_setup.dart';
 import 'package:leute/router.dart';
 import 'package:palette_generator/palette_generator.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'firebase_options.dart';
 
-void main() async {
+const Map<String, String> UNIT_ID = kReleaseMode
+    ? {
+  'ios': '[YOUR iOS AD UNIT ID]',
+  'android': '[YOUR ANDROID AD UNIT ID]',
+}
+    : {
+  'ios': 'ca-app-pub-3940256099942544/2934735716',
+  'android': 'ca-app-pub-3940256099942544/6300978111',
+};
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   // Always initialize Awesome Notifications
   await NotificationController.initializeLocalNotifications();
   await NotificationController.initializeIsolateReceivePort();
+  Future<InitializationStatus> _initGoogleMobileAds() {
+    // TODO: Initialize Google Mobile Ads SDK
+    return MobileAds.instance.initialize();
+  }
+
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
+
   diSetup();
   runApp(const MyApp());
 }
